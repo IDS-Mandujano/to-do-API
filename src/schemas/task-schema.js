@@ -14,3 +14,7 @@ const createTaskSchema = z.object({
         error: "La descripcion debe ser un texto"
     }).optional()
 });
+
+module.exports = {
+    createTaskSchema
+};

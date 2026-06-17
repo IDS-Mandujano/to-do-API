@@ -1,3 +1,5 @@
+require('dotenv')
+
 const express = require('express')
 const taskRoutes = require('./routes/task-routes')
 
@@ -7,7 +9,7 @@ app.use(express.json());
 
 app.use('/tasks',taskRoutes);
 
-const PORT = 8080
+const PORT = process.env.PORT || 3000
 app.listen(PORT, ()=>{
     console.log(`Servidor de la API encendido y escuchando en http://localhost:${PORT}`);
 })
