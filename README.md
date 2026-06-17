@@ -6,35 +6,26 @@
 * **JSON Web Token (JWT):** Sistema de autenticación y protección de rutas.
 * **Dotenv:** Gestión de variables de entorno.
 
-## ⚙️ Instalación y Configuración
+## Instalación y Configuración
 
 1. Clona este repositorio:
-   \`\`\`bash
    git clone https://github.com/IDS-Mandujano/to-do-API.git
-   \`\`\`
 
 2. Instala las dependencias:
-   \`\`\`bash
    npm install
-   \`\`\`
 
 3. Crea un archivo `.env` en la raíz del proyecto y configura tus variables basándote en este ejemplo:
-   \`\`\`env
    PORT=8080
-   JWT_SECRET=tu_super_secreto_aqui
-   \`\`\`
 
 4. Inicia el servidor:
-   \`\`\`bash
    node src/app.js
-   \`\`\`
 
 ## Autenticación (Flujo de uso)
 Esta API requiere autenticación para administrar las tareas.
 1. Haz un `POST` a `/register` con un `username` y `password` para crear un usuario.
 2. Haz un `POST` a `/login` con esas credenciales. La API devolverá un Token.
 3. En tus peticiones a las rutas de `/tasks`, incluye el token en los headers:
-   * `Authorization: Bearer <tu_token>`
+   * `Authorization: Bearer <token>`
 
 ## Endpoints Principales
 
